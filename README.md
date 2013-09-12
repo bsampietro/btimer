@@ -6,8 +6,7 @@ Btimer is a command line Ruby script to measure time. I did it as a simple way t
 ## Installation:
 
 You don't need to do any installation, you can just run the main file. But if you want to run btimer from any directory,
-the best way is to download the btimer.rb file and put it in a btimer folder anywhere. Btimer will create a file that is 
-used to measure time, so the directory needs to have write privileges for your user.
+the best way is to download the btimer.rb file and put it anywhere.
 Then you can generate a symbolic link in your bin folder on your home (~/bin) like this:
 
 ``` bash
@@ -41,6 +40,4 @@ t add 15
 t sub 20
 # substracts 20 minutes to the current time count
 ```
-
-And that is it!
 
