@@ -43,7 +43,8 @@ class Timer
   end
   
   def elapsed_seconds
-    @data[:state] == :started ? (TIME_NOW - @data[:start]).to_i + @data[:elapsed] : @data[:elapsed]
+    @data[:state] == :started ?
+      (TIME_NOW - @data[:start]).to_i + @data[:elapsed] : @data[:elapsed]
   end
   
   def elapsed_last_stop_seconds
@@ -97,7 +98,9 @@ def save(data)
   end
 end
 
-data = YAML.load_file(FILE_PATH) rescue {:start => TIME_NOW, :elapsed => 0, :state => :stopped, :stopped_at => TIME_NOW}
+data = YAML.load_file(FILE_PATH) rescue
+    {:start => TIME_NOW, :elapsed => 0,
+      :state => :stopped, :stopped_at => TIME_NOW}
 
 t = Timer.new(data)
 
